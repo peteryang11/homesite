@@ -47,6 +47,7 @@ export function signup(firstName, lastName, preferredName, phone, email, passwor
 				phone: phone,
 				last_name: lastName,
 				consented: consented,
+				type: 'professional'
 		}).then(function(res){
 				if (!res.data || !res.data.result) {
 					dispatch(receiveSignupException(res.data.data))
