@@ -4,7 +4,8 @@ build/*
 node_modules/
 **/*.DS_Store
 **/._*
-app/config/config.js
+app/config/*
+!app/config/api.js
 public/
 npm-debug.log
 app/npm-debug.log
