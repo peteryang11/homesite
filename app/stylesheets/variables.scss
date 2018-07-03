@@ -1,0 +1,53 @@
+$card-margin-bottom: 20px;
+$time-button-radius: 7px;
+$timeline-gutter: 24px;
+$card-shadow-gutter: 2px;
+$activity-info-margin-top: 24px;
+$activity-info-left-width: 84px;
+$activity-info-left-margin-side: 20px;
+$card-border-radius: 2px;
+$card-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+$input-no-border-shadow: 0 1px 2px #999;
+$side-menu-top-margin: 12px;
+$side-menu-border-radius: 10px;
+
+$mobile-day-menu-shadow: 0 2px 6px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
+$day-nav-bar-width: 98px;
+$day-info-bar-width: 198px;
+$close-button-height: 48px;
+$close-button-margin: 12px;
+$search-icon-width: 36px;
+$header-height: 66px;
+$footer-height: 117px;
+$mobile-info-menu-height: 80px;
+
+$bottom-menu-shadow: 0 -1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+/*destination drag card*/
+$activity-drag-card-width: 800px;
+$activity-drag-card-margin-left: $day-nav-bar-width + 32px;
+$activity-photo-panel-width: 800px;
+$activity-rating-panel-width: 400px;
+//$activity-pane-with: $activity-drag-card-width + $day-nav-bar-width + $day-info-bar-width;
+$activity-pane-with: 1240px;
+/*color pallete*/
+$blue: #4FB9D9;
+$dark-blue: #3C8EA6;
+$bright-blue: #007ed8;
+$theme-red: #b22e3c;
+$dark-theme-red: #771d27;
+$background-color: #FAFAFA;
+$light-yellow: #FDDB60;
+$yellow: #FEC53C;
+$orange: #FC9806;
+$dark-orange: #FE5207;
+$cta-red: #ca0449;
+$light-cta-red: #e40452;
+$grey: #8a8a8a;
+$cyan: #4cbad8;
+$button-white: #EEE;
+$button-white-hover: #FAFAFA;
+$button-white-active: #ffffff;
+
+$layer-1: 1;
+$layer-2: 2;
+$layer-3: 3;

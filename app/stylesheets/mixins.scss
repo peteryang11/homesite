@@ -1,0 +1,52 @@
+@mixin closeButton() {
+	height: $close-button-height;
+	margin: 0 auto;
+	width: $close-button-height;
+	border-radius: 50%;
+	display: block;
+	background-size: contain;
+	background-color: $theme-red;
+	opacity: 1;
+	transition: background-color 0.3s ease;
+	i {
+		width: 24px;
+		font-size: 28px;
+		margin-left: 10px;
+		margin-top: 9px;
+		color: #FFF;
+		&:before {
+		}
+	}
+	&:hover {
+		background-color: $blue;
+		opacity: 1;
+	}
+}
+
+@mixin closeButton_large() {
+	margin: $close-button-margin auto;
+	border-radius: 50%;
+	float: none;
+	display: block;
+	background-color: $theme-red;
+	&:hover {
+		background-color: $blue;
+		opacity: 1;
+	}
+}
+
+@mixin dayLock($width) {
+	position: absolute;
+	width: $width;
+	height: $width;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: rgba(208, 208, 208, 0.6);
+	cursor: pointer;
+	i {
+		font-size: 18px;
+	}
+}

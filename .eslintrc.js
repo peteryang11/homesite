@@ -16,7 +16,7 @@ module.exports = {
     "plugins": ["react"],
     "rules": {
         "eqeqeq": ["error", "always"],
-        "indent": ["error", "tab"],
+        "indent": [0, "tab", { "SwitchCase": 1 }, { "ignoreComments": true }],
         "semi": ["error", "never"],
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error"

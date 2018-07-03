@@ -1,0 +1,154 @@
+@import "variables";
+@import "mixins";
+
+// form
+.signup-form {
+	padding-bottom: 0;
+	padding-top: 60px;
+	max-width: 480px;
+	background-color:white;
+}
+
+.signup-form button span {
+	font-size: 20px;
+}
+
+.signup-success, .signin-success {
+	padding-bottom: 30px;
+	padding-top: 60px;
+	max-width: 480px;
+	background-color:white;
+}
+
+.signup-success p{
+	color: #4A4A4A;
+}
+
+.row .privacy-text {
+	margin-left: 3px;
+}
+
+.signup-form .p, .signupform div {
+	font-family: "Open Sans",Arial,sans-serif;
+	color: #767676;
+	font-size: 12px;
+}
+
+.form-invite,  {
+	margin-bottom: 10px;
+}
+
+.form-invite .form-group {
+	text-align: left;
+}
+
+.form-group.margin-bottom-30 {
+	margin-bottom: 30px;
+}
+
+.form-invite .bootstrap-select, .form-invite .bootstrap-select .btn, .form-invite .transparent-input, .form-contact .form-control, .form-unsubscribe .email {
+	background: transparent;
+	box-shadow: none;
+	display: block;
+	height: 50px;
+	padding: 8px 20px;
+	line-height: 1.42857;
+	font-size: 18px;
+	margin-right: 6px;
+}
+
+.form-control {
+	color:#555;
+}
+
+p.note {
+	min-height: 17px;
+	margin: 4px 0 2px;
+	font-size: 12px;
+	color: #767676;
+	text-align: left;
+}
+
+.has-error .form-control {
+	border-color: #a94442;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+.form-invite .help-block, .form-contact.help-block {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+.inline-error {
+	position: absolute;
+}
+
+.btn.group-confirm-button {
+	margin-top: 15px;
+	-webkit-border-radius: 0 !important;
+	border-radius: 0 !important;
+}
+
+.btn.button-adjust {
+	margin-left: 112px;
+}
+
+.reset-button {
+	background-color: #e7e7e7 !important;
+}
+
+.create-user-outter-wrapper {
+	box-shadow: 0 1px 2px #999;
+}
+
+.inline-error span, .signup-exception span{
+	color: #CA0449;
+}
+
+.help-block {
+	display: block;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+a.btn.disabled {
+	pointer-events: none;
+}
+
+.btn.disabled {
+	cursor: not-allowed;
+}
+
+// pages
+.signin-page, .signup-page, .forgetpassword-page {
+	background-color: white;
+}
+
+.signup-success-page, .signout-page, .forgetpassword-page {
+	background-color: white;
+	padding-bottom: 30px;
+	padding-top: 60px;
+}
+
+.signup-success-page p, .signout-page p, .forgetpassword_request_success {
+	color: #4A4A4A;
+	text-align: center;
+}
+
+.signin-outer-container, .signup-outer-container, .signup-success-outer-container, .signout-outer-container, .forgetpassword-page-outer-container, .forgetpassword-page-outer-container {
+	min-height: calc(100vh - #{$header-height + $footer-height});
+}
+
+// other
+.margin-top-10 {
+	margin-top: 10px;
+}
+
+.center {
+	text-align: center;
+}

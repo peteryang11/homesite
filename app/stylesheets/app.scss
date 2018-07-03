@@ -1,3 +1,4 @@
+@import "variables";
 
 html {
 	font-family: "Open Sans",Arial,sans-serif;
@@ -9,6 +10,304 @@ body {
 	height: 100%;
 }
 
-.app {
-	color: green;
+body.noScroll {
+	overflow: hidden;/*stop scrolling*/
+}
+
+.app, .app-container {
+	height: 100%;
+}
+
+.signup-button, .signout-button {
+	margin-top:1.8em;
+	color:$cta-red;
+	right:1em;
+}
+
+.navbar-button {
+	margin-top:0.3em;
+	color:$theme-red;
+}
+
+
+.h-separate {
+	width: 100%;
+	height: 1px;
+	background-color: $cyan;
+}
+@-webkit-keyframes moveToLeft {
+	to { -webkit-transform: translateX(-100%); }
+}
+@keyframes moveToLeft {
+	to { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+}
+@-webkit-keyframes moveFromRight {
+	from { -webkit-transform: translateX(100%); }
+}
+@keyframes moveFromRight {
+	from { -webkit-transform: translateX(100%); transform: translateX(100%); }
+}
+
+.example-enter {
+  animation: moveFromRight 0.75s ease both;
+}
+
+.example-leave {
+	position: absolute!important;//keep elements on page from shifting
+	width: 100%;
+	top: 0px;
+  animation: moveToLeft 0.75s ease both;
+}
+
+h1.page-head {
+	display: none;
+}
+
+.top-nav {
+	height:7em;
+	&.row {
+		margin: 0;
+		background: white;
+		color: $theme-red;
+		box-shadow: 0 1px 5px 3px rgba(0,0,0,0.2);
+		z-index: $layer-3;
+		position: relative;
+	}
+}
+
+.top-nav .header {
+	padding-top:0px;
+	float: left;
+	&:after {
+		height: 1px;
+		width: 100%;
+		content: '';
+		background-color: #ddd;
+	}
+
+	.logo-sm {
+		padding-top:1.8em;
+		height:6em;
+		margin-top:0px;
+	}
+
+	h1 {
+		font-size: 21px;
+		font-weight: normal;
+		display: block;
+		margin: 0.4em 2em 0em 5em;
+		width:90%;
+	}
+}
+
+.header {
+	margin-bottom:0px;
+}
+
+.loading-spinner {
+	width: 36px;
+	height: 36px;
+	margin: 6px;
+	position: absolute;
+	right: 0;
+}
+
+.navbar-buttons {
+	ul{
+		list-style-type: none;
+		li{
+			font-size:2em;
+			margin-right:1em;
+			margin-top:1.2em;
+		}
+	}
+}
+
+.footer {
+	width: 100%;
+	background-color: #312B13;
+	padding: 15px 0px;
+	text-align: center;
+	margin: 0 auto;
+	min-height: $footer-height;
+}
+
+.container-fixer{
+	display:flex;
+}
+
+.flexer-1 .flexer-2 .flexer-3 .flexer-4{
+	flex:1;
+}
+
+.footer-link {
+	a {
+		color: white;
+	}
+	a:hover {
+		color: white;
+	}
+	a:visited {
+		color: white;
+	}
+}
+
+.footer-info {
+	color: white;
+}
+
+.nav-links-container {
+	float: right;
+	padding-top:2em;
+}
+
+.user-nav, .plan-nav, .destinations-nav {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+}
+
+.plan-nav, .destinations-nav {
+	border-right: 1px solid #DDD;
+}
+.nav-button {
+	display: inline-block;
+	color: $theme-red;
+	cursor: pointer;
+	text-align: center;
+
+	i:before {
+		font-size: 26px;
+	}
+	&:hover {
+		text-decoration: none!important;
+		color: $dark-theme-red;
+		text-align: center;
+	}
+	&.disabled {
+		color: $grey;
+		cursor: default;
+		&:hover {
+			color: $grey;
+		}
+	}
+	.icon-text {
+		text-decoration: none!important;
+		&:hover {
+			text-decoration: none!important;
+		}
+	}
+}
+.user-button {
+	margin-left: -5px;
+}
+.save-button {
+	i {
+		top: 4px;
+	}
+	i:before {
+		font-size: 24px;
+	}
+	.icon-text {
+		margin-top: 1px;
+	}
+}
+
+.user-action-menu {
+	position: absolute;
+	top: 72px;
+	right: 0;
+	width: 200px;
+	z-index: 2;
+	ul {
+		margin-bottom: 0;
+		background: white;
+		box-shadow: 0 1px 5px 3px rgba(0,0,0,0.2);
+		padding-left: 0;
+	}
+	li {
+		text-align: center;
+		padding: 10px;
+		list-style: none;
+		cursor: pointer;
+		&:hover {
+			background: #eaeaea;
+		}
+	}
+}
+
+.menu-layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+}
+
+@media (max-width: 768px) {
+	.top-nav {
+		.plan-nav {
+			float: left;
+			border-right: 0;
+		}
+		.nav-button, .user-nav {
+			float: right;
+		}
+		.header {
+			width: 100%;
+			text-align: center;
+			h1 {
+				display: none;
+			}
+			.logo-sm {
+				display: inline-block;
+				width: 55px;
+				margin-top: -20px;
+			}
+		}
+	}
+	.nav-links-container {
+		position: absolute;
+		width: 100%;
+		left: 0;
+	}
+	h1.page-head {
+		display: block;
+		font-size: 1.5em;
+		margin-left: 5vw;
+	}
+}
+@media (max-width: 400px) {
+	.top-nav .header {
+		h1 {
+			display: none;
+		}
+	}
+}
+
+.scroll-down-arrow {
+	position: relative;
+	margin: 40px auto;
+	border-radius: 50%;
+	height: 66px;
+	width: 66px;
+	border: 1.5px solid rgb(51, 51, 51);
+	text-align: center;
+}
+
+.scroll-down-arrow img {
+	position: relative;
+	width: 56px;
+	top: 8px;
+}
+
+.lan-selections {
+	cursor: pointer;
+	padding: 0.2em;
+	margin-top: 2.8em;
+	border: 0.21em solid $theme-red;
+	border-radius: 4px;
+	background-color: $theme-red;
+	color: white;
 }
