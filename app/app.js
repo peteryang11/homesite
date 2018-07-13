@@ -1,15 +1,15 @@
 require('./stylesheets/app.scss')
+import 'bootstrap/dist/css/bootstrap.css'
 //react stuff
 import React from 'react'
-import { render } from 'react-dom'
-import { Route, BrowserRouter, HashRouter, Switch } from 'react-router-dom'
+import {render} from 'react-dom'
+import {Route, BrowserRouter, HashRouter, Switch} from 'react-router-dom'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 //redux stuff
-import { Provider } from 'react-redux'
-import { applyMiddleware, compose, createStore } from 'redux'
+import {Provider} from 'react-redux'
+import {applyMiddleware, compose, createStore} from 'redux'
 import thunk from 'redux-thunk'
 import homesite from './reducers'
-//container stuff
 import HomePageContainer from './pages/home/HomePageContainer'
 import SignupContainer from './pages/users/signup/SignupContainer'
 import HeaderContainer from './pages/common/header/HeaderContainer'
@@ -40,10 +40,12 @@ let routes = (
 					transitionEnterTimeout={1000}
 					transitionLeaveTimeout={1000}>
 					<HeaderContainer/>
-					<Switch>
-						<Route exact name="signup" path="/users/signup" component={SignupContainer}/>
-						<Route exact name="home" path="/" component={HomePageContainer}/>
-					</Switch>
+					<div className="main-content">
+						<Switch>
+							<Route exact name="signup" path="/users/signup" component={SignupContainer}/>
+							<Route exact name="home" path="/" component={HomePageContainer}/>
+						</Switch>
+					</div>
 				</ReactCSSTransitionGroup>
 			</Router>
 		</Provider>
@@ -51,3 +53,4 @@ let routes = (
 )
 
 render(routes, document.getElementById('root'))
+
