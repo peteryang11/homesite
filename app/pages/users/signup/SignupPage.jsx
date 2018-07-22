@@ -69,12 +69,18 @@ export default class SignupPage extends Component {
 		this.setState({
 			firstName: event.target.value,
 		})
+		handleInvalidPasswordForSignUp(this.state, event.target.value,
+			"The firstname you provide is invalid.", 
+			"The firstname field is required.",)
 	}
 
 	handleChangeLastName(event) {
 		this.setState({
 			lastName: event.target.value,
 		})
+		handleInvalidPasswordForSignUp(this.state, event.target.value,
+			"The lastname you provide is invalid.", 
+			"The lastname field is required.",)
 	}
 
 	handleChangePreferredName(event) {
