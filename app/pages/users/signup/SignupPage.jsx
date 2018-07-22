@@ -166,7 +166,7 @@ export default class SignupPage extends Component {
 							<div className="row">
 								<div className="col-lg-6 col-md-6">
 									<label>First Name
-										<label className="special">*</label>
+										<label className="required-star">*</label>
 									</label>
 									<input aria-label="firstname" 
 											className="border-white form-control transparent-input form-user" 
@@ -182,7 +182,7 @@ export default class SignupPage extends Component {
 								</div>
 								<div className="col-lg-6 col-md-6">	
 									<label>Last Name
-										<label className="special">*</label>
+										<label className="required-star">*</label>
 									</label>
 									<input aria-label="lastname" 
 											className="border-white form-control transparent-input form-user" 
@@ -199,7 +199,7 @@ export default class SignupPage extends Component {
 							<div className="row">
 								<div className="col-lg-6 col-md-6">
 									<label>Preferred Name
-										<label id="specific">*</label>
+										<label id="nonrequired-star">*</label>
 									</label>
 									<input aria-label="preferredName" 
 												className="border-white form-control transparent-input form-user" 
@@ -214,7 +214,7 @@ export default class SignupPage extends Component {
 								</div>
 								<div className="col-lg-6 col-md-6">
 										<label>Phone Number
-											<label className="special">*</label>
+											<label className="required-star">*</label>
 										</label>
 										<input aria-label="phone" 
 												className="border-white form-control transparent-input form-user" 
@@ -231,7 +231,7 @@ export default class SignupPage extends Component {
 							<div className="row">
 								<div className="col-lg-6 col-md-6">
 									<label>Email
-										<label className="special">*</label>
+										<label className="required-star">*</label>
 									</label>
 										<input aria-label="email" 
 												className="border-white form-control transparent-input" 
@@ -246,7 +246,7 @@ export default class SignupPage extends Component {
 								</div>
 								<div className="col-lg-6 col-md-6">
 									<label>Password
-										<label className="special">*</label>
+										<label className="required-star">*</label>
 									</label>
 									<input aria-label="password" 
 												className="border-white form-control transparent-input" 
