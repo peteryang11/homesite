@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 import { cookieDomain, baseUrl } from '../../../config/config'
 import { isValidInternalURL } from '../../../util/validationHelpers'
-import { handleInvalidEmailForSignUp, handleInvalidPasswordForSignUp, 
-				handleInvalidPhoneForSignUp } 
+import { handleInvalidEmailForSignUp, handleInvalidPasswordForSignUp, handleInvalidFirstNameForSignUp, 
+				handleInvalidLastNameForSignUp, handleInvalidPhoneForSignUp } 
 				from "../../../util/invalidInputHelpers.js"
 import loadingImage from '../../../assets/img/loading.gif'
 import PropTypes from 'prop-types'
@@ -69,8 +69,7 @@ export default class SignupPage extends Component {
 		this.setState({
 			firstName: event.target.value,
 		})
-		handleInvalidPasswordForSignUp(this.state, event.target.value,
-			"The firstname you provide is invalid.", 
+		handleInvalidFirstNameForSignUp(this.state, event.target.value, 
 			"The firstname field is required.",)
 	}
 
@@ -78,8 +77,7 @@ export default class SignupPage extends Component {
 		this.setState({
 			lastName: event.target.value,
 		})
-		handleInvalidPasswordForSignUp(this.state, event.target.value,
-			"The lastname you provide is invalid.", 
+		handleInvalidLastNameForSignUp(this.state, event.target.value, 
 			"The lastname field is required.",)
 	}
 
@@ -93,8 +91,7 @@ export default class SignupPage extends Component {
 		this.setState({
 			phone: event.target.value,
 		})
-		handleInvalidPhoneForSignUp(this.state, event.target.value, 
-			"The phone you provide is invalid format.", 
+		handleInvalidPhoneForSignUp(this.state, event.target.value,
 			"The phone field is required.",)
 	}
 
