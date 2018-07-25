@@ -176,10 +176,10 @@ export default class SignupPage extends Component {
 											name="firstname" 
 											placeholder="First Name"
 											type="text"
-											value={this.state.firstname} 
+											value={this.state.value}
 											onChange={this.handleChangeFirstName.bind(this)} />
 											<div className="help-block inline-error">
-												<span>{this.state.errorMsgForSignUp["firstname"]}</span>
+												<span>{this.state.errorMsgForSignUp["firstName"]}</span>
 											</div>
 											<span></span>
 								</div>
@@ -195,7 +195,7 @@ export default class SignupPage extends Component {
 											value={this.state.value} 
 											onChange={this.handleChangeLastName.bind(this)} />
 											<div className="help-block inline-error">
-												<span>{this.state.errorMsgForSignUp["username"]}</span>
+												<span>{this.state.errorMsgForSignUp["lastName"]}</span>
 											</div>
 								</div>
 							</div>
