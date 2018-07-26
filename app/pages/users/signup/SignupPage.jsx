@@ -70,7 +70,7 @@ export default class SignupPage extends Component {
 			firstName: event.target.value,
 		})
 		handleInvalidFirstNameForSignUp(this.state, event.target.value, 
-			"The firstname field is required.",)
+			"First name is required.",)
 	}
 
 	handleChangeLastName(event) {
@@ -78,7 +78,7 @@ export default class SignupPage extends Component {
 			lastName: event.target.value,
 		})
 		handleInvalidLastNameForSignUp(this.state, event.target.value, 
-			"The lastname field is required.",)
+			"Last field is required.",)
 	}
 
 	handleChangePreferredName(event) {
@@ -92,7 +92,7 @@ export default class SignupPage extends Component {
 			phone: event.target.value,
 		})
 		handleInvalidPhoneForSignUp(this.state, event.target.value,
-			"The phone field is required.",)
+			"Phone number is required.",)
 	}
 
 	handleChangeEmail(event) {
@@ -101,7 +101,7 @@ export default class SignupPage extends Component {
 		})
 		handleInvalidEmailForSignUp(this.state, event.target.value, 
 			"The email you provide is invalid format.", 
-			"The email field is required.",)
+			"Email address is required.",)
 	}
 
 	handleChangePassword(event) {
@@ -110,7 +110,7 @@ export default class SignupPage extends Component {
 		})
 		handleInvalidPasswordForSignUp(this.state, event.target.value,
 			"The password you provide is invalid.", 
-			"The password field is required.",)
+			"Password is required.",)
 	}
 
 	handleChangeAgreement(event) {
