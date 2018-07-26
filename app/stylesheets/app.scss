@@ -1,5 +1,4 @@
 @import "variables";
-
 html {
 	font-family: "Open Sans", Arial, sans-serif;
 	font-size: 20px;
@@ -427,4 +426,54 @@ h1.page-head {
 	border-radius: 4px;
 	background-color: $theme-red;
 	color: white;
+}
+
+.required-star {
+    color: red;
+}
+
+#nonrequired-star {
+	color: white;
+}
+
+form {
+	text-align: center;
+	padding: 10px;
+	padding-top: 100px;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+label {
+    padding: 5 10px;
+    vertical-align: right;
+    margin-bottom: 0.5px;
+    margin-top: 15px;
+}
+
+input[type=text] {
+    background-color: #E5E5E5;
+    vertical-align: middle;
+    margin-top: 10px;
+}
+
+input[type=email] {
+    background-color: #E5E5E5;
+    vertical-align: middle;
+}
+
+input[type=password] {
+    background-color: #E5E5E5;
+    vertical-align: middle;
+}
+
+.row {
+    text-align: left;
+}
+
+#Next {
+	text-align: center;
+	margin-top: 50px;
+	margin-left: auto;
 }
