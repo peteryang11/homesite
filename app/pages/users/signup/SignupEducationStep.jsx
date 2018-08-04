@@ -3,24 +3,16 @@ import { Link } from 'react-router-dom'
 
 import { cookieDomain, baseUrl } from '../../../config/config'
 import { isValidInternalURL } from '../../../util/validationHelpers'
-// import { handleInvalidEmailForSignUp, handleInvalidPasswordForSignUp, handleInvalidFirstNameForSignUp, 
-//                 handleInvalidLastNameForSignUp, handleInvalidPhoneForSignUp } 
-//                 from "../../../util/invalidInputHelpers.js"
 import loadingImage from '../../../assets/img/loading.gif'
 import PropTypes from 'prop-types'
 
-export default class SignupPageEducation extends Component {
+export default class SignupEducationStep extends Component {
     constructor(props) {
         super(props)
         this.state = {
             school: "",
             yearOfGraduation: "",
             major: "",
-            errorMsgForSignUp: {
-                school: "",
-                yearOfGraduation: "",
-                major: "",
-            },
             validInputForSignUp: {
                 school: false,
                 yearOfGraduation: false,
@@ -57,67 +49,7 @@ export default class SignupPageEducation extends Component {
         }
     }
 
-    // handleChangeFirstName(event) {
-    //     this.setState({
-    //         firstName: event.target.value,
-    //     })
-    //     handleInvalidFirstNameForSignUp(this.state, event.target.value, 
-    //         "First name is required.",)
-    // }
 
-    // handleChangeLastName(event) {
-    //     this.setState({
-    //         lastName: event.target.value,
-    //     })
-    //     handleInvalidLastNameForSignUp(this.state, event.target.value, 
-    //         "Last field is required.",)
-    // }
-
-    // handleChangePreferredName(event) {
-    //     this.setState({
-    //         preferredName: event.target.value,
-    //     })
-    // }
-
-    // handleChangePhone(event) {
-    //     this.setState({
-    //         phone: event.target.value,
-    //     })
-    //     handleInvalidPhoneForSignUp(this.state, event.target.value,
-    //         "Phone number is required.",)
-    // }
-
-    // handleChangeEmail(event) {
-    //     this.setState({
-    //         email: event.target.value,
-    //     })
-    //     handleInvalidEmailForSignUp(this.state, event.target.value, 
-    //         "The email you provide is invalid format.", 
-    //         "Email address is required.",)
-    // }
-
-    // handleChangePassword(event) {
-    //     this.setState({
-    //         password: event.target.value,
-    //     })
-    //     handleInvalidPasswordForSignUp(this.state, event.target.value,
-    //         "The password you provide is invalid.", 
-    //         "Password is required.",)
-    // }
-
-    // handleChangeAgreement(event) {
-    //     this.setState({
-    //         consented: event.target.checked,
-    //     })
-    // }
-
-    handleClickSignup(event) {
-        event.preventDefault()
-        let school = this.state.school
-        let yearOfGraduation = this.state.yearOfGraduation
-        let major = this.state.major
-        this.props.signupHandler(school, yearOfGraduation, major)
-    }
 
     render() {
         let { userSignupState } = this.props
@@ -160,9 +92,9 @@ export default class SignupPageEducation extends Component {
                                             placeholder="School"
                                             type="text"
                                             value={this.state.value}
+                                            onChange={this.state.school}
                                             />
                                             <div className="help-block inline-error">
-                                                <span>{this.state.errorMsgForSignUp["school"]}</span>
                                             </div>
                                             <span></span>
                                 </div>
@@ -175,12 +107,13 @@ export default class SignupPageEducation extends Component {
                                             name="year of graduation" 
                                             placeholder="Year of Graduation"
                                             type="text" 
-                                            value={this.state.value} 
+                                            value={this.state.value}
+                                            onChange={this.state.yearOfGraduation} 
                                             >
                                         <option value="0" selected disabled>Year</option>
                                         <option value="2018">2018</option>
-                                        <option value="2015">2017</option>
-                                        <option value="2015">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2016">2016</option>
                                         <option value="2015">2015</option>
                                         <option value="2014">2014</option>
                                         <option value="2013">2013</option>
@@ -209,7 +142,6 @@ export default class SignupPageEducation extends Component {
                                         <option value="1990">1990</option>
                                     </select>
                                         <div className="help-block inline-error">
-                                            <span>{this.state.errorMsgForSignUp["yearOfGraduation"]}</span>
                                         </div>
                                 </div>
                             </div>
@@ -221,10 +153,10 @@ export default class SignupPageEducation extends Component {
                                                 name="major" 
                                                 placeholder="Major"
                                                 type="text" 
-                                                value={this.state.value} 
+                                                value={this.state.value}
+                                                onChange={this.state.major}
                                                 />
                                                 <div className="help-block inline-error">
-                                                    <span>{this.state.errorMsgForSignUp["major"]}</span>
                                                 </div> 
                                 </div>
                             </div>
@@ -246,9 +178,7 @@ export default class SignupPageEducation extends Component {
     }
 }
 
-SignupPageEducation.propTypes = {
+SignupEducationStep.propTypes = {
     userSignupState: PropTypes.shape({
-        signedUp: PropTypes.bool.isRequired,
-        signupMsg: PropTypes.string.isRequired,
     }).isRequired,
 }
