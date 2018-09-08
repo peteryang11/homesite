@@ -511,7 +511,7 @@ select[type=text] {
 
 #experience {
     background-color: red;
-	border: 1px solid red;
+	border: 1px white red;
 	padding-left: auto;
 	padding-right: auto;
 	padding-top: 1px;
@@ -527,4 +527,8 @@ select[type=text] {
 	margin-right: 0px;
 	background-color: red;
 	border: 1px solid red;
+}
+
+#register {
+	background-color: red;
 }

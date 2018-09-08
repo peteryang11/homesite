@@ -96,10 +96,8 @@ export default class SignupExperienceStep extends Component {
                             <div className="col-lg-2 col-md-2" id="first">
                                 Experience
                             </div>
-                            <div className="col-lg-2 col-md-2">
                                 <button className="w3-button w3-xlarge w3-black" id="experience">
                                 +</button>
-                            </div>
                         </div>
                         <form className="bigform">
                             <div className="row">
@@ -184,26 +182,64 @@ export default class SignupExperienceStep extends Component {
                                         <div className="help-block inline-error">
                                         </div> 
                                 </div>
-                                <div className="col-lg-6 col-md-6">
+                                <div className="col-lg-4 col-md-4">
                                     <label>Year of Experience</label>
                                     <select aria-label="yearOfExperience" 
                                             className="border-white form-control transparent-input form-user" 
                                             name="yearOfExperience" 
-                                            placeholder="yearOfExperience"
+                                            placeholder="year"
                                             type="text" 
                                             value={this.state.value}
                                             onChange={this.state.yearOfExperience} 
                                             >
-                                        <option value="" selected disabled>yearOfExperience</option>
-                                        <option value="1">1</option>
-                                        <option value="3">1-3</option>
-                                        <option value="5">3-5</option>
-                                        <option value="7">5-7</option>
-                                        <option value="10">7-10</option>
-                                        <option value="more than 10">10+</option>
+                                        <option value="" selected disabled>Year</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2009">2009</option>
+                                        <option value="2008">2008</option>
+                                        <option value="2007">2007</option>
+                                        <option value="2006">2006</option>
+                                        <option value="2005">2005</option>
+                                        <option value="2004">2004</option>
+                                        <option value="2003">2003</option>
+                                        <option value="2002">2002</option>
+                                        <option value="2001">2001</option>
+                                        <option value="2000">2000</option>
+                                        <option value="1999">1999</option>
                                     </select>
                                         <div className="help-block inline-error">
                                         </div> 
+                                </div>
+                                <div className="col-lg-2 col-md-2">
+                                    <label>Month</label>
+                                    <select aria-label="month" 
+                                            className="border-white form-control transparent-input form-user" 
+                                            name="Month" 
+                                            placeholder="month"
+                                            type="text" 
+                                            value={this.state.value}
+                                            >
+                                        <option value="" selected disabled>Month</option>
+                                        <option value="12">12</option>
+                                        <option value="11">11</option>
+                                        <option value="10">10</option>
+                                        <option value="9">9</option>
+                                        <option value="8">8</option>
+                                        <option value="7">7</option>
+                                        <option value="6">6</option>
+                                        <option value="5">5</option>
+                                        <option value="4">4</option>
+                                        <option value="3">3</option>
+                                        <option value="2">2</option>
+                                        <option value="1">1</option>
+                                    </select>
                                 </div>
                             </div>
                         </form>
